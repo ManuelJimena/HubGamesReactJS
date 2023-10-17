@@ -1,7 +1,11 @@
-import './Button.css';
+import "./Button.css"
 
-const Button = () => {
-  return <button className="button"></button>;
+const Button = ({ isStarted, handleButtonClick }) => {
+  return (
+    <button className="button" onClick={handleButtonClick}>
+      {isStarted ? 'Reset' : 'Start'}
+    </button>
+  );
 };
 
 export default Button;
