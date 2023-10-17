@@ -1,7 +1,12 @@
 import './App.css';
+import Game from './components/Game/Game.jsx';
 
 const App = () => {
-  return <></>;
+  return (
+    <div className="app">
+      <Game />
+    </div>
+  );
 };
 
 export default App;

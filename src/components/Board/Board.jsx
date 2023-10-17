@@ -1,8 +1,14 @@
-//para el tablero//
 import './Board.css';
+import Cell from '../Cell/Cell';
 
 const Board = () => {
-  return <h2>texto</h2>;
+  return (
+    <div className="board">
+        <div className="board-row">
+            <Cell/>
+        </div>
+    </div>
+  );
 };
 
 export default Board;

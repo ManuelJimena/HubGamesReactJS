@@ -1,8 +1,19 @@
-//para la lógica//
-import './Game.css';
+import "./Game.css";
+import Board from "../Board/Board";
+import Button from "../Button/Button";
+import Message from "../Message/Message";
 
 const Game = () => {
-  return <h2>texto</h2>;
+
+  return (
+    <div className="game">
+      <Message/>
+      <div>
+        <Board/>
+      </div>
+        <Button />
+    </div>
+  );
 };
 
 export default Game;

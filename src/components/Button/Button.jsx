@@ -1,8 +1,10 @@
-//boton de inicio y reset//
-import './Button.css';
+import "./Button.css"
 
 const Button = () => {
-  return <h2>texto</h2>;
+  return (
+    <button className="button">
+    </button>
+  );
 };
 
 export default Button;
