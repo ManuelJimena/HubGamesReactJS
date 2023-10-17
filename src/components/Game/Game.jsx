@@ -1,17 +1,17 @@
-import "./Game.css";
-import Board from "../Board/Board";
-import Button from "../Button/Button";
-import Message from "../Message/Message";
+import './Game.css';
+
+import Board from '../Board/Board';
+import Button from '../Button/Button';
+import Message from '../Message/Message';
 
 const Game = () => {
-
   return (
     <div className="game">
-      <Message/>
+      <Message />
       <div>
-        <Board/>
+        <Board />
       </div>
-        <Button />
+      <Button />
     </div>
   );
 };

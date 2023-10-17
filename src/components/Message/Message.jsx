@@ -1,11 +1,7 @@
-import "./Message.css";
+import './Message.css';
 
 const Message = () => {
-
-  return (
-  <div className="message">
-  </div>
-  );
+  return <div className="message"></div>;
 };
 
 export default Message;

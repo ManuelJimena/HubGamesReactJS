@@ -1,10 +1,7 @@
 import './Cell.css';
 
 const Cell = () => {
-  return (
-    <button>
-    </button>
-  );
+  return <button></button>;
 };
 
 export default Cell;
