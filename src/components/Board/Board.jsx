@@ -1,13 +1,25 @@
 import './Board.css';
-
 import Cell from '../Cell/Cell';
 
-const Board = () => {
+const Board = ({ board, handleCellClick }) => {
   return (
     <div className="board">
-      <div className="board-row">
-        <Cell />
-      </div>
+      {board.map((row, rowIndex) => {
+        return (
+          <div key={`row-${rowIndex}`} className="board-row">
+            {row.map((cell, colIndex) => {
+              return (
+                <Cell
+                  key={`cell-${colIndex}`}
+                  value={cell}
+                  isClickable={cell === null}
+                  handleCellClick={() => handleCellClick(rowIndex, colIndex)}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -5,7 +5,3 @@
   align-items: center;
   height: 100vh;
 }
-
-.Game .board-container.hidden {
-  display: none;
-}
