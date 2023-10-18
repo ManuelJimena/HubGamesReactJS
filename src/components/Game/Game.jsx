@@ -1,5 +1,7 @@
 import './Game.css';
+
 import React, { useEffect, useState } from 'react';
+
 import Board from '../Board/Board';
 import Button from '../Button/Button';
 import Message from '../Message/Message';
@@ -18,21 +20,37 @@ const Game = () => {
   const validateBoard = (board) => {
     // Valida las filas
     for (let i = 0; i < 3; i++) {
-      if (board[i][0] === board[i][1] && board[i][0] === board[i][2] && board[i][0] !== null) {
+      if (
+        board[i][0] === board[i][1] &&
+        board[i][0] === board[i][2] &&
+        board[i][0] !== null
+      ) {
         return board[i][0];
       }
     }
     // Valida las columnas
     for (let i = 0; i < 3; i++) {
-      if (board[0][i] === board[1][i] && board[0][i] === board[2][i] && board[0][i] !== null) {
+      if (
+        board[0][i] === board[1][i] &&
+        board[0][i] === board[2][i] &&
+        board[0][i] !== null
+      ) {
         return board[0][i];
       }
     }
     // Valida las diagonales
-    if (board[0][0] === board[1][1] && board[0][0] === board[2][2] && board[0][0] !== null) {
+    if (
+      board[0][0] === board[1][1] &&
+      board[0][0] === board[2][2] &&
+      board[0][0] !== null
+    ) {
       return board[0][0];
     }
-    if (board[0][2] === board[1][1] && board[0][2] === board[2][0] && board[0][2] !== null) {
+    if (
+      board[0][2] === board[1][1] &&
+      board[0][2] === board[2][0] &&
+      board[0][2] !== null
+    ) {
       return board[0][2];
     }
     // Valida empate
