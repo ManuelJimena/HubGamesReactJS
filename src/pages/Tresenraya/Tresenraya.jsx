@@ -1,13 +1,13 @@
-import Game from "../../components/Game/Game";
-import "./Tresenraya.css";
+import './Tresenraya.css';
+
+import Game from '../../components/Game/Game';
 
 const Tresenraya = () => {
-
-    return (
-        <>
-        <Game />
-        </>
-    );
+  return (
+    <>
+      <Game />
+    </>
+  );
 };
 
 export default Tresenraya;
