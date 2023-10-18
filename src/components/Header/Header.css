@@ -1,0 +1,115 @@
+.header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; */
+  background: var(--black-color);
+  padding: 3rem 9%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  max-height: 8vh;
+  position: relative; /* Añadido para posicionar correctamente el logo */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header .icons {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+.header .icons:hover {
+  color: var(--blue-color);
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.header .navbar a {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  margin: 0 2rem;
+}
+
+.no-action-link {
+  display: none;
+  /* margin: 0 20%; */
+}
+
+.header .navbar a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--red-color);
+  text-underline-offset: 1rem;
+  color: var(--blue-color);
+}
+
+.header .navbar .space {
+  display: inline-block;
+  width: 14rem;
+}
+
+.header .logo {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%; /* Centra el logo horizontalmente */
+  transform: translateX(-50%); /* Centra el logo horizontalmente */
+  transition: all 0.3s linear;
+}
+
+.header .logo img {
+  width: 6rem;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  .header .logo {
+    transform: translateX(0);
+    left: 3rem;
+  }
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: var(--black-color);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 3rem 2rem;
+  }
+  .header .navbar .space {
+    display: none;
+  }
+  .navbar {
+    display: inline;
+    text-align: left;
+  }
+}

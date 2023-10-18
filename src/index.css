@@ -1,0 +1,44 @@
+/* PALETTE */
+
+:root {
+  --black-color: #000;
+  --grey-color: #3b3b3b;
+  --red-color: #e8422d;
+  --white-color: #fff;
+  --blue-color: #12408d;
+}
+
+/* RESET */
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+/* GLOBAL STYLES */
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--black-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--blue-color);
+  border-radius: 5rem;
+}
+
+body {
+  background-color: var(--grey-color);
+}
+
+main {
+  min-height: 84vh;
+}
