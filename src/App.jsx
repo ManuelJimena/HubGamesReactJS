@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 const App = () => {
   return (
     <div className="app">
-      <Header logo="../src/assets/Logo.png" logoAlt="logo game hub" />
+      <Header logo="https://res.cloudinary.com/dhjmt9vvq/image/upload/v1697735168/Logo_Hub_ydlcun.png" logoAlt="logo game hub" />
       <main>
         <Outlet />
       </main>
