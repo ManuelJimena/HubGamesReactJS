@@ -3,32 +3,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 0.2%;
   justify-items: center;
 }
 
-.flip-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: #0080ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+@media (min-width: 768px) {
+  .game-board {
+    max-width: 900px;
+  }
 }
 
-.flip-button:hover {
-  background-color: #0066cc;
+@media (min-width: 992px) {
+  .game-board {
+    max-width: 1200px;
+  }
 }
 
-.flip-button:active {
-  transform: translateY(2px);
+@media (max-width: 500px) {
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  }
 }
