@@ -58,7 +58,7 @@ function CardGame() {
           }),
         );
         setGameCards([]);
-      }, 1500);
+      }, 1000);
     }
   }, [gameCards]);
 
