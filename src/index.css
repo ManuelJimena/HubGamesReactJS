@@ -42,3 +42,7 @@ body {
 main {
   min-height: 84vh;
 }
+
+h2 {
+  color: var(--white-color);
+}
