@@ -135,14 +135,17 @@ const Game = () => {
 
   return (
     <div className="game">
+      <h2>Tres en raya</h2>
       <Message turn={state.turn} winner={state.winner} />
       {state.isStarted ? (
         <>
-          <Board board={state.board} handleCellClick={handleCellClick} />
           <Button
             isStarted={state.isStarted}
             handleButtonClick={handleResetButtonClick}
           />
+          <div className="board-container">
+            <Board board={state.board} handleCellClick={handleCellClick} />
+          </div>
         </>
       ) : (
         <Button isStarted={state.isStarted} handleButtonClick={handleStartButtonClick} />
