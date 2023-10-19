@@ -10,9 +10,9 @@
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
-}
 
-.button:hover {
-  background-color: #555;
-  color: #fff;
+  &:hover {
+    background-color: var(--yellow-color);
+    color: #fff;
+  }
 }

@@ -16,7 +16,7 @@ const Header = ({ logo, logoAlt }) => {
       <div id="menu-btn" className="fas fa-bars icons" onClick={menuBtnClick}></div>
       <a className="no-action-link"></a>
       <nav className="navbar">
-        <NavLink to="tresenraya">Tresenraya</NavLink>
+        <NavLink to="">Tresenraya</NavLink>
         <span className="space"></span>
         <NavLink to="memorama">Memorama</NavLink>
       </nav>
