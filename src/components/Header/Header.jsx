@@ -23,7 +23,7 @@ const Header = ({ logo, logoAlt }) => {
       <a className="no-action-link"></a>
       <div className="logo">
         <Link to="/">
-        <img src={logo} alt={logoAlt} />
+          <img src={logo} alt={logoAlt} />
         </Link>
       </div>
     </header>
