@@ -16,9 +16,7 @@ const Game = () => {
     winner: null,
   });
 
-  // Función para validar el tablero
   const validateBoard = (board) => {
-    // Valida las filas
     for (let i = 0; i < 3; i++) {
       if (
         board[i][0] === board[i][1] &&
@@ -28,7 +26,7 @@ const Game = () => {
         return board[i][0];
       }
     }
-    // Valida las columnas
+
     for (let i = 0; i < 3; i++) {
       if (
         board[0][i] === board[1][i] &&
@@ -38,7 +36,7 @@ const Game = () => {
         return board[0][i];
       }
     }
-    // Valida las diagonales
+
     if (
       board[0][0] === board[1][1] &&
       board[0][0] === board[2][2] &&
@@ -53,15 +51,14 @@ const Game = () => {
     ) {
       return board[0][2];
     }
-    // Valida empate
+
     if (board.flat().every((cell) => cell !== null)) {
       return 'draw';
     }
-    // Si no gana nadie
+
     return null;
   };
 
-  // Validamos el tablero cada vez que cambie el estado de la tabla
   useEffect(() => {
     const winner = validateBoard(state.board);
     if (winner !== null) {
@@ -71,7 +68,6 @@ const Game = () => {
       }));
     } else {
       if (state.turn === 'O') {
-        // Llamamos a la función makeCPUMove después de 1 segundo
         const timer = setTimeout(() => {
           makeCPUMove();
         }, 1000);
@@ -111,9 +107,7 @@ const Game = () => {
     });
   };
 
-  // Función para hacer el movimiento de la CPU
   const makeCPUMove = () => {
-    // Buscamos las celdas vacías
     const emptyCells = [];
     state.board.forEach((row, rowIndex) => {
       row.forEach((cell, colIndex) => {
@@ -122,7 +116,7 @@ const Game = () => {
         }
       });
     });
-    // Escogemos una celda aleatoria
+
     const [row, col] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
     const boardCopy = [...state.board];
     boardCopy[row][col] = 'O';

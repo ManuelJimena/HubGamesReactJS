@@ -12,7 +12,7 @@
   text-align: center;
   gap: 1rem;
   max-height: 8vh;
-  position: relative; /* Añadido para posicionar correctamente el logo */
+  position: relative;
 }
 
 .navbar {
@@ -41,7 +41,6 @@
   font-size: 1.2rem;
   margin: 0 2rem;
   text-transform: uppercase;
-
 }
 
 .no-action-link {
@@ -64,8 +63,8 @@
 .header .logo {
   position: absolute;
   top: 0.5rem;
-  left: 50%; /* Centra el logo horizontalmente */
-  transform: translateX(-50%); /* Centra el logo horizontalmente */
+  left: 50%;
+  transform: translateX(-50%);
   transition: all 0.3s linear;
 }
 
