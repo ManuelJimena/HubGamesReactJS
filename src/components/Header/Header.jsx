@@ -3,7 +3,7 @@ import './Header.css';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ logo, logoAlt }) => {
   const menuBtnClick = () => {
     const menuBtn = document.querySelector('#menu-btn');
     const navbar = document.querySelector('.header .navbar');
@@ -23,7 +23,7 @@ const Header = () => {
       <a className="no-action-link"></a>
       <div className="logo">
         <Link to="/">
-          <img src=".src/assets/Logo.png" alt="logo game hub" />
+        <img src={logo} alt={logoAlt} />
         </Link>
       </div>
     </header>

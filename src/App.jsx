@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 const App = () => {
   return (
     <div className="app">
-      <Header />
+       <Header logo="./src/assets/Logo_Hub.png" logoAlt="logo game hub" />
       <main>
         <Outlet />
       </main>
