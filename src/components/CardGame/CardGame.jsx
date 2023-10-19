@@ -116,7 +116,6 @@ function CardGame() {
 
   return (
     <div className="card-game">
-      <h2>Memorama</h2>
       <Button isStarted={isStarted} handleButtonClick={handleButtonClick} />
       {isStarted ? (
         <div className="game-board">

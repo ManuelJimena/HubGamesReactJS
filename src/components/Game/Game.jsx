@@ -135,7 +135,6 @@ const Game = () => {
 
   return (
     <div className="game">
-      <h2>Tres en raya</h2>
       <Message turn={state.turn} winner={state.winner} />
       {state.isStarted ? (
         <>
