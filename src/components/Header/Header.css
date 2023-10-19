@@ -40,6 +40,8 @@
   color: var(--white-color);
   font-size: 1.2rem;
   margin: 0 2rem;
+  text-transform: uppercase;
+
 }
 
 .no-action-link {
