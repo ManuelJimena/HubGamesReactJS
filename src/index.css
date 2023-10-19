@@ -5,7 +5,7 @@
   --grey-color: #3b3b3b;
   --red-color: #e8422d;
   --white-color: #fff;
-  --blue-color: #12408d;
+  --yellow-color: #ffaa00;
 }
 
 /* RESET */
@@ -31,7 +31,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: var(--blue-color);
+  background: var(--yellow-color);
   border-radius: 5rem;
 }
 

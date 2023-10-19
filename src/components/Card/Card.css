@@ -1,0 +1,67 @@
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+  transform-style: preserve-3d;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #f0f0f0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.card .back {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f0f0f0;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card.is-flipped .back {
+  opacity: 1;
+}
+
+.card .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1c1c1c;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card.is-flipped .content {
+  opacity: 1;
+}

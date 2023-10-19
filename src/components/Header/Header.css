@@ -29,7 +29,7 @@
 }
 
 .header .icons:hover {
-  color: var(--blue-color);
+  color: var(--yellow-color);
 }
 
 .header #menu-btn {
@@ -49,9 +49,9 @@
 
 .header .navbar a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--red-color);
+  text-decoration-color: var(--white-color);
   text-underline-offset: 1rem;
-  color: var(--blue-color);
+  color: var(--yellow-color);
 }
 
 .header .navbar .space {
