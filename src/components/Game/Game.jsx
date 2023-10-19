@@ -1,15 +1,15 @@
-import "./Game.css";
+import './Game.css';
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import Board from "../Board/Board";
-import Button from "../Button/Button";
-import Message from "../Message/Message";
+import Board from '../Board/Board';
+import Button from '../Button/Button';
+import Message from '../Message/Message';
 
 const Game = () => {
   const [state, setState] = useState({
     isStarted: false,
-    turn: "X",
+    turn: 'X',
     board: Array(3)
       .fill()
       .map(() => Array(3).fill(null)),
@@ -55,7 +55,7 @@ const Game = () => {
     }
     // Valida empate
     if (board.flat().every((cell) => cell !== null)) {
-      return "draw";
+      return 'draw';
     }
     // Si no gana nadie
     return null;
@@ -70,7 +70,7 @@ const Game = () => {
         winner: winner,
       }));
     } else {
-      if (state.turn === "O") {
+      if (state.turn === 'O') {
         // Llamamos a la función makeCPUMove después de 1 segundo
         const timer = setTimeout(() => {
           makeCPUMove();
@@ -89,25 +89,21 @@ const Game = () => {
 
   const handleCellClick = (row, col) => {
     const boardCopy = [...state.board];
-    if (
-      boardCopy[row][col] !== null ||
-      state.winner !== null ||
-      state.turn === "O"
-    ) {
+    if (boardCopy[row][col] !== null || state.winner !== null || state.turn === 'O') {
       return;
     }
     boardCopy[row][col] = state.turn;
     setState((prevState) => ({
       ...prevState,
       board: boardCopy,
-      turn: prevState.turn === "X" ? "O" : "X",
+      turn: prevState.turn === 'X' ? 'O' : 'X',
     }));
   };
 
   const handleResetButtonClick = () => {
     setState({
       isStarted: false,
-      turn: "X",
+      turn: 'X',
       board: Array(3)
         .fill()
         .map(() => Array(3).fill(null)),
@@ -127,14 +123,13 @@ const Game = () => {
       });
     });
     // Escogemos una celda aleatoria
-    const [row, col] =
-      emptyCells[Math.floor(Math.random() * emptyCells.length)];
+    const [row, col] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
     const boardCopy = [...state.board];
-    boardCopy[row][col] = "O";
+    boardCopy[row][col] = 'O';
     setState((prevState) => ({
       ...prevState,
       board: boardCopy,
-      turn: "X",
+      turn: 'X',
     }));
   };
 
@@ -150,10 +145,7 @@ const Game = () => {
           />
         </>
       ) : (
-        <Button
-          isStarted={state.isStarted}
-          handleButtonClick={handleStartButtonClick}
-        />
+        <Button isStarted={state.isStarted} handleButtonClick={handleStartButtonClick} />
       )}
     </div>
   );

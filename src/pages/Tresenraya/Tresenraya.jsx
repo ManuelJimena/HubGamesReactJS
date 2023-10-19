@@ -1,6 +1,6 @@
-import "./Tresenraya.css";
+import './Tresenraya.css';
 
-import Game from "../../components/Game/Game";
+import Game from '../../components/Game/Game';
 
 const Tresenraya = () => {
   return (
