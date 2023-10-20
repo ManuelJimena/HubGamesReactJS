@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Card from '../../components/Card/Card';
 import CardGame from '../../components/CardGame/CardGame';
 import Title from '../../components/Title/Title';

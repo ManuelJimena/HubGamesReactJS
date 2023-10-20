@@ -1,6 +1,6 @@
 import './Game.css';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Board from '../Board/Board';
 import Button from '../Button/Button';
